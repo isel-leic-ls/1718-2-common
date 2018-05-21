@@ -1,8 +1,11 @@
 package pt.isel.ls.todo;
 
-public interface ToDoRepository{
-    public Iterable<ToDo> getAll();
-    public ToDo getById(int id);
-    public void add(ToDo t);
-    public boolean remove(int id);
+public interface ToDoRepository {
+    Iterable<ToDo> getAll();
+
+    ToDo getById(int id);
+
+    void add(ToDo t);
+
+    boolean remove(int id);
 }

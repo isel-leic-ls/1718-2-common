@@ -6,13 +6,14 @@ import java.io.Writer;
 public final class CompositeWritable implements Writable {
 
     private final Writable[] _content;
-    
-    public CompositeWritable(Writable... cs){
+
+    public CompositeWritable(Writable... cs) {
         _content = cs;
     }
+
     @Override
     public void writeTo(Writer w) throws IOException {
-        for(Writable c : _content) {
+        for (Writable c : _content) {
             c.writeTo(w);
         }
     }
